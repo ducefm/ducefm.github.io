@@ -413,6 +413,16 @@
     width:90%;
     margin-left: 5%;
   }
+  .email-textfield {
+    width:calc(75% - 16px); padding-left:16px ;
+  }
+
+  .btn-yellow{
+    width:25%!important;
+    margin-top:4px;
+    margin-right: 4px;
+  }
+  /*
   #email {
     width:calc(80% - 16px); padding-left:16px ;
   }
@@ -421,7 +431,7 @@
     width:20%;
     margin-top:4px;
     margin-right: 4px;
-  }
+  }old stuff*/
 
   .feature{
       padding-top: 50px;
