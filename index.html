@@ -1,176 +1,320 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Lisn</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="duce_fav.png" type="image/gif" sizes="16x16">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="devices.min.css">
-	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
-	<style type="text/css">
-		body, html{
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			font-size: 10px;
-			background: #180826;
-			font-family: Helvetica, Sans-serif;
-		}
-		section{
-			max-width: 320px;
-			width: 100%;
-			margin: auto;
-			text-align: center;
-		}
-		.d-container{
-			width: 100%;
-			height: 100vh;
-			overflow: hidden;
-		}
-		.d-container.video{
-			max-width: initial;
-			height: initial;
-		}
-		.intro-container{
-			margin: 32px auto;
-		}
-		.intro-content{
-			margin-top: 32px;
-		}
-		.intro-content div{
-			color: rgba(255,255,255,0.72);
-			font-size: 2.6rem;
-			font-weight: 100;
-			opacity:0.5;
-		}
-		.intro-content img{
-			margin: 16px 32px;
-		}
-		.intro-action-images{
-			width: 60%;
-			margin: 16px auto;
-		}
-		.share div{
-			width: 100vw;
-			height: 64px;
-			line-height: 64px;
-			font-size: 2.4rem;
-			font-weight: 100;
-		}
-		.share div:hover{
-			cursor: pointer;
-			opacity: 0.88;
-		}
-		.share div.twitter{
-			background: #55acee;
-			color: #fff;
-			position: relative;
-			margin-left: calc((960px - 100vw)/2)
-		}
-		.web-only{
-			display: none;
-		}
-		.intro-action-video{
-			background: #f5a623;
-			height: 80px;
-			padding: 0 32px;
-    		margin: 32px auto;
-    		border-radius: 4px;
-    		line-height: 80px;
-    		font-size: 2.4rem;
-    		border: none;
-		}
-		.intro-action-video:focus{
-			outline: none;
-			opacity: 0.88;
-		}
-		.intro-action-video:active{
-			outline: none;
-			opacity: 0.5;
-		}
-		
-		a{
-			color: yellow;
-		}
-		
-		a:hover{
-			text-decoration: none;
-			color: white;
-		}
-		@media only screen and (min-device-width: 1024px){
-			section{
-				max-width: 960px;
-			}
-			.d-container{
-				height: initial;
-			}
-			.d-container.video{
-				margin: 32px auto 64px;
-			}
-			.intro-action-images{
-				display: inline-block;
-				vertical-align: top;
-				width: 20%;
-				margin: 32px 16px;
-			}
-			.marvel-device{
-				margin: auto;
-			}
-			.web-only{
-				display: block;
-			}
-			.mobile-only{
-				display: none;
-			}
-		}
-	</style>
-	<script type="text/javascript">
-		function scrollToVideo(){
-			var video = document.getElementById('video');
-			video.play();
-			var h = window.outerHeight
-			window.scrollBy(0, h);
-		}
-	</script>
-</head>
-<body>
-	<section class="intro d-container">
-		<div class="intro-content">
-			<img src="logo.png" alt="Duce">
-			<div>Music with friends in real time.<a href="http://eepurl.com/bPsf_D"> Sign Up </a> </div>
-		</div>
-		<div class"intro-action">
-			<button class="mobile-only intro-action-video" onclick="scrollToVideo()">Watch in Action</button>
-			<img src="app_store.svg" alt="Duce iOS App" class="intro-action-images">
-			<img src="play_store.svg" alt="Duce Android App" class="intro-action-images">
-		</div>
-	</section>
-	<section class="video d-container">
-		<div class="marvel-device iphone6 silver web-only">
-		    <div class="top-bar"></div>
-		    <div class="sleep"></div>
-		    <div class="volume"></div>
-		    <div class="camera"></div>
-		    <div class="sensor"></div>
-		    <div class="speaker"></div>
-		    <div class="screen">
-		    	<video width="375" height="667" autoplay="autoplay" class="web-only" loop>
-		    		<source src="video.mp4" type="video/mp4">
-		    	</video>
-		    </div>
-		    <div class="home"></div>
-		    <div class="bottom-bar"></div>
-		</div>
-		<div class="mobile-only">
-			<video width="375" height="667" controls id="video" class="mobile-only" loop>
-	    		<source src="video.mp4" type="video/mp4">
-	    	</video>
-		</div><br><br>
-		<a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
-	</section>
-<!-- 	<section class="share">
-		<div class="twitter">Share on Twitter</div>
-	</section> -->
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lisn - Share music with friends in real time</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lisn.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   <script>
+
+      $( function(){
+        a=5;
+        var colors = {
+          "purple":"#6967CE",
+          "yellow":"#DA9C16",
+          "green":"#55BA69",
+          "red":"#FD636A"
+        };
+        colorIndex = 1;
+        function myLoop(messageIndex){
+
+
+            setTimeout(function(){ $('.message').css('top',"+=0");
+
+                      if(messageIndex<16){
+                          topMessageHeight=$('#msg'+messageIndex).outerHeight(true);
+                          console.log("Message height is " + topMessageHeight + " for index " + messageIndex);
+                          offset="-="+topMessageHeight;
+                          $('.message').css('top',offset);
+                          if (messageIndex==8){
+                            colorIndex += 1;
+                            $( ".carouse-inner" ).animate({ "margin-left": "-=200px" },200);
+                            $('#lisn').css("background",colors["yellow"]);
+                            $('.carouse ').css("background","linear-gradient(transparent,#DA9C16)");
+                            $('#msgboard').css("background",colors["yellow"]);
+                            $('#msgboard').css("border-top","none");
+                            $('#imgr1').css('opacity','0');
+                            $('#imgr2').css('opacity','1');
+                            $('#img1').css('opacity','0');
+                            $('#img2').css('opacity','1');
+                            $('#imgleft').css("margin-left","-114px");
+                          }
+                          else if (messageIndex==11){
+                            colorIndex += 1;
+                            $( ".carouse-inner" ).animate({ "margin-left": "-=200px" },200);
+                            $('#lisn').css("background",colors["green"]);
+                            $('.carouse').css("background","linear-gradient(transparent,#55BA69)");
+                            $('#msgboard').css("background",colors["green"]);
+                            $('#msgboard').css("border-top","none");
+                            $('#imgr2').css('opacity','0');
+                            $('#imgr3').css('opacity','1');
+                            $('#img2').css('opacity','0');
+                            $('#img3').css('opacity','1');
+                            $('#imgleft').css("margin-left","-114px");
+                          }
+                          else if (messageIndex==14){
+                            colorIndex += 1;
+                            $( ".carouse-inner" ).animate({ "margin-left": "-=200px" },200);
+                            $('#lisn').css("background",colors["red"]);
+                            $('.carouse').css("background","linear-gradient(transparent,#FD636A)");
+                            $('#msgboard').css("background",colors["red"]);
+                            $('#msgboard').css("border-top","none");
+                            $('#imgr3').css('opacity','0');
+                            $('#imgr4').css('opacity','1');
+                            $('#img3').css('opacity','0');
+                            $('#img4').css('opacity','1');
+                            $('#imgleft').css("margin-left","-114px");
+                          }
+                          $('#song' + (colorIndex-1)).css('opacity','0');
+                          $('#artist'+ (colorIndex-1)).css('opacity','0');
+                          $('#song' + colorIndex).css('opacity','1');
+                          $('#artist' + colorIndex).css('opacity','0.7');
+                          myLoop(messageIndex+1);
+                        }
+                        else if (messageIndex==16){
+                            $('.message').animate({"top":"+=450px"},200);
+                            $('#song' + colorIndex).css('opacity','0');
+                            $('#artist' + colorIndex).css('opacity','0');
+                            $('#song' + 1).css('opacity','1');
+                            $('#artist' + 1).css('opacity','0.7');
+                            $( ".carouse-inner" ).animate({ "margin-left": "+=600px" },200);
+                            $('#lisn').css("background",colors["purple"]);
+                            $('.carouse ').css("background","linear-gradient(transparent,#6967CE)");
+                            $('#msgboard').css("background",colors["purple"]);
+                            $('#msgboard').css("border-top","none");
+                            $('#imgr4').css('opacity','0');
+                            $('#imgr1').css('opacity','1');
+                            $('#img4').css('opacity','0');
+                            $('#img1').css('opacity','1');
+                            $('#imgleft').css("margin-left","-114px");
+                            colorIndex = 1;
+                            myLoop(5);
+                        }
+
+                    },2000);
+                      }
+
+              myLoop(a);
+      });
+    </script>
+
+    <script>
+    $(function() {
+        var $body = $(document);
+        $body.bind('scroll', function() {
+            if ($body.scrollLeft() !== 0) {
+                $body.scrollLeft(0);
+            }
+        });
+    });
+    </script>
+  </head>
+  <body id="lisn">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <center> <h1 id="lisnTitle">Lisn</h1> <h2 id="Tagline">Listen to music together</h2> </center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <center> <img src="images/app_store@2x.png" class="img-responsive" width="158px" style="margin:10px 0px 20px 0px"></center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-2 col-md-3 ">
+          </div>
+
+          <div class="col-lg-4 col-sm-8 col-md-6 maincontent">
+              <div class="bg" id="iphone">
+                <center><img src="images/iphone@2x1.png" class="img-responsive" width="286px"></center>
+              </div>
+              <div id="dots"><div class="animated playing"></div></div>
+
+              <div class="bg" id="img-contain">
+              <div id="imgleft">
+                <img id="img1" src="images/purple_left.png"  class="img-responsive" width="170px">
+                <img id="img2" src="images/yellow_left.png"  class="img-responsive" width="170px">
+                <img id="img3" src="images/green_left.png"   class="img-responsive" width="170px" >
+                <img id="img4" src="images/red_left.png"     class="img-responsive" width="170px" >
+              </div>
+
+              <div id="imgright">
+                <img id="imgr1" src="images/purple_right.png" width="170px">
+                <img id="imgr2" src="images/yellow_right.png" width="170px">
+                <img id="imgr3" src="images/green_right.png"  width="170px">
+                <img id="imgr4" src="images/red_right.png"    width="170px">
+              </div>
+              </div>
+
+              <div class="carouse">
+                <div class="song"   id="song1">Warm on Cold Night</div>
+                <div class="artist" id="artist1">Honne</div>
+                <div class="song"   id="song2">CAMP</div>
+                <div class="artist" id="artist2" >Childish Gambino</div>
+                <div class="song"   id="song3">What Kind Of Man</div>
+                <div class="artist" id="artist3">Nicholas Jaar</div>
+                <div class="song"   id="song4">Step & Stagger</div>
+                <div class="artist" id="artist4">Murlocs</div>
+
+              <div class="carouse-inner">
+                  <div class="pic" style="margin-left:0px;" >
+                      <img src="images/art1.jpg"class="img-responsive" >
+                  </div>
+
+                  <div class="pic" style="margin-left:0px;">
+                    <img src="images/art2.jpg" class="img-responsive">
+                  </div>
+
+                  <div class="pic" style="margin-left:0px;">
+                    <img src="images/art3.jpg" clas="img-responsive">
+                  </div>
+
+                  <div class="pic" style="margin-left:0px;  ">
+                    <img src="images/art4.jpg"class="img-responsive" >
+                  </div>
+              </div>
+
+          </div>
+
+              <div id="msgboard">
+
+                  <div class="message ui-widget-content ui-corner-all received"  id="msg1">
+                    whatsup, have you heard this yet?
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all received"  id="msg2">
+                  came out yesterday
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all sent"  id="msg3">
+                  love me some honne!
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all received"  id="msg4">
+                  they always remind me of smiley face
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all sent"  id="msg5">
+                  this is my favourite gambino track
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all sent"  id="msg6">
+                  I love this track. CAMP. The whole album is pretty dope
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all sent"  id="msg7">
+                  Have you seen his TV show though
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all sent"  id="msg8">
+                  Community? Yeah its hilarious haha
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all received"  id="msg9">
+                  i’ve been playing this on repeat for the last three days  teeth face
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all received"  id="msg10">
+                  #jaar kills it again
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all received"  id="msg11">
+                  his beats are so tribal
+                  </div>
+
+                  <div class="message ui-widget-content ui-corner-all sent"  id="msg12">
+                  I’m gonna make everyone Lisn to this
+                </div>
+        </div>
+
+
+            </div>
+
+          <div class="col-lg-4 col-sm-2 col-md-3">
+          </div>
+        </div>
+        <div class="row features-row">
+          <div class="col-md-4 col-sm-12 feature">
+            <div class="feature-image">
+              <img src="./images/tile1.svg">
+            </div>
+            <div class="feature-description">
+              <p class="feature-title">
+                Synced Playback
+              </p>
+              <p class="feature-description">
+                Play tracks from friends in real time<br>It's like sharing earphones
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 feature">
+            <div class="feature-image">
+              <img src="./images/tile2.svg">
+            </div>
+            <div class="feature-description">
+              <p class="feature-title">
+                Hand Picked Music
+              </p>
+              <p class="feature-description">
+                The best recommendations come from people who know you.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 feature">
+            <div class="feature-image">
+              <img src="./images/tile3.svg">
+            </div>
+            <div class="feature-description">
+              <p class="feature-title">
+                Spotify + Soundcloud
+              </p>
+              <p class="feature-description">
+                Choose from over 130 million tracks from your favorite services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div  class="row" id="foot1">
+
+          <div id="beta" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div id="betaText"> We’re currently in private beta.<br>
+                      Sign up to be notified about the launch!</div>
+          </div>
+
+          <div id="beta-signup" class="col-lg-6 col-md-6  col-sm-6 col-xs-12">
+              <div id="inpt">  <input type="text" id="email" placeholder="EMAIL ADDRESS" >
+            <button type="button" id="signup" class="btn btn-default">SIGN UP</button></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
