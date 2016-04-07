@@ -26,6 +26,13 @@
     margin:0 auto;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 #dots{
   margin:10px auto;
   width: 300px;
@@ -479,7 +486,7 @@
     color: white;
     font-size: 18px;
   }
-  
+
   #foot1 {
     position:relative;
     margin-top:83px;
