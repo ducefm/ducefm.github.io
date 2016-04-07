@@ -356,11 +356,11 @@
 .feature-title{
   font-family: 'solomon_sans_boldbold';
   color: white;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .feature-description{
-  font-family: 'solomon_normalregular';
+  font-family: 'solomon_sans_lightregular';
   color: white;
   font-size: 18px;
 }
@@ -417,6 +417,8 @@
     width:calc(75% - 16px); padding-left:16px ;
   }
 
+
+
   .btn-yellow{
     width:25%!important;
     margin-top:4px;
@@ -465,6 +467,19 @@
     margin-left:54px;
   }
 
+
+  .feature-title{
+    font-family: 'solomon_sans_boldbold';
+    color: white;
+    font-size: 30px;
+  }
+
+  .feature-description{
+    font-family: 'solomon_normalregular';
+    color: white;
+    font-size: 18px;
+  }
+  
   #foot1 {
     position:relative;
     margin-top:83px;
