@@ -364,12 +364,15 @@ button:focus {
   font-family: 'solomon_sans_boldbold';
   color: white;
   font-size: 24px;
+  margin-top: 20px;
+
 }
 
 .feature-description{
   font-family: 'solomon_sans_lightregular';
   color: white;
   font-size: 18px;
+  line-height: 30px;
 }
 
 @media screen and (min-width:1200px){
