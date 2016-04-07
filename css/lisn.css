@@ -56,9 +56,9 @@
 @keyframes audio1 {
   9% { height: 0.75em; }
   36% { height: 0.5em; }
-  42% { height: 1.375em; }
+  42% { height: 2.375em; }
   69% { height: 0.5em; }
-  76% { height: 1.625em; }
+  76% { height: .625em; }
   100% { height: 1em; }
 }
 
@@ -67,7 +67,7 @@
   36% { height: 0.5em; }
   42% { height: 1.5em; }
   69% { height: 0.5em; }
-  76% { height: 1.75em; }
+  76% { height: 2.75em; }
   100% { height: 1em; }
 }
 
@@ -76,7 +76,7 @@
   36% { height: 0.5em; }
   42% { height: 1.5em; }
   69% { height: 0.5em; }
-  76% { height: 1.5em; }
+  76% { height: 2.5em; }
   100% { height: 1em; }
 }
 
@@ -85,14 +85,14 @@
   36% { height: 0.5em; }
   42% { height: 1.75em; }
   69% { height: 0.5em; }
-  76% { height: 1.625em; }
+  76% { height: 2.625em; }
   100% { height: 1em; }
 }
 
 @keyframes audio5 {
   9% { height: 1em; }
   36% { height: 0.5em; }
-  42% { height: 1.25em; }
+  42% { height: 2.25em; }
   69% { height: 0.5em; }
   76% { height: 1.75em; }
   100% { height: 1em; }
@@ -101,7 +101,7 @@
 @keyframes audio6 {
   9% { height: 1.125em; }
   36% { height: 0.5em; }
-  42% { height: 1.875em; }
+  42% { height: 2.875em; }
   69% { height: 0.5em; }
   76% { height: 1.5em; }
   100% { height: 1em; }
@@ -112,7 +112,7 @@
   36% { height: 0.5em; }
   42% { height: 1.875em; }
   69% { height: 0.5em; }
-  76% { height: 1.75em; }
+  76% { height: 2.75em; }
   100% { height: 1em; }
 }
 
